@@ -500,29 +500,50 @@
   }
 
   .app-header__inner {
-    padding-inline: 1rem;
+    padding: 1rem;
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .app-main {
+    padding-top: calc(140px + 1.5rem);
+    padding-inline: 1rem;
+  }
+
+  .home {
+    gap: 3rem;
   }
 
   .home-hero {
-    padding-inline: 1.5rem;
+    padding: 1.5rem;
   }
 
   .home-hero__inner {
     grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .home-hero__title {
+    font-size: 1.75rem;
+    line-height: 1.25;
   }
 
   .home-hero__stats {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .home-hero__stat {
+    padding: 0.85rem 1rem;
   }
 
   .home-section--highlight {
-    padding-inline: 1.5rem;
+    padding: 1.5rem;
   }
 
   .home-about {
-    padding-inline: 1.5rem;
+    padding: 1.5rem;
   }
 
   .home-about__inner {
@@ -536,12 +557,21 @@
   }
 
   .home-social {
-    padding-inline: 1.5rem;
+    padding: 1.5rem;
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
   .areas-section__cta {
+    flex-direction: column;
     align-items: flex-start;
+  }
+
+  .contact-options {
+    grid-template-columns: 1fr;
   }
 }
