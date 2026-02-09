@@ -5,8 +5,19 @@ import './App.css'
 
 function App() {
   const scrollToId = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    try {
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    } catch (error) {
+      console.error('Scroll error:', error)
+    }
+  }
+
+  const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    event.preventDefault()
+    scrollToId(id)
   }
 
   return (
@@ -21,30 +32,21 @@ function App() {
             <a
               href="#inicio"
               className="app-header__link"
-              onClick={(event) => {
-                event.preventDefault()
-                scrollToId('inicio')
-              }}
+              onClick={(event) => handleNavClick(event, 'inicio')}
             >
               Início
             </a>
             <a
               href="#areas"
               className="app-header__link"
-              onClick={(event) => {
-                event.preventDefault()
-                scrollToId('areas')
-              }}
+              onClick={(event) => handleNavClick(event, 'areas')}
             >
               Áreas de atuação
             </a>
             <a
               href="#contato"
               className="app-header__link"
-              onClick={(event) => {
-                event.preventDefault()
-                scrollToId('contato')
-              }}
+              onClick={(event) => handleNavClick(event, 'contato')}
             >
               Contato
             </a>
