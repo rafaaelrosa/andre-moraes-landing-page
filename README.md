@@ -2,6 +2,8 @@
 
 Landing page profissional para escritório de advocacia especializado em Direito do Trabalho e Direito de Família.
 
+🔗 **Site:** https://rafaaelrosa.github.io/andre-moraes-landing-page/
+
 ## 🚀 Tecnologias
 
 - **React 19** - Biblioteca JavaScript para interfaces
@@ -35,6 +37,42 @@ Landing page profissional para escritório de advocacia especializado em Direito
 │   └── main.tsx        # Entry point
 ├── index.html          # HTML base
 └── vite.config.ts      # Configuração do Vite
+```
+
+## 🚀 Deploy
+
+### Opção 1: Comando NPM (Simples)
+
+```bash
+npm run deploy
+```
+
+### Opção 2: Script Bash (Interativo)
+
+```bash
+./deploy.sh
+```
+
+O script irá:
+1. Verificar mudanças não commitadas
+2. Gerar build otimizado
+3. Fazer deploy automático para GitHub Pages
+4. Exibir link do site
+
+### Deploy Manual
+
+Se preferir fazer manualmente:
+
+```bash
+# 1. Build
+npm run build
+
+# 2. Commit da pasta dist
+git add dist -f
+git commit -m "Deploy: update site"
+
+# 3. Push para gh-pages
+git subtree push --prefix dist origin gh-pages
 ```
 
 ## 🛠️ Instalação e Uso
